@@ -33,5 +33,32 @@ label.field { display:grid; gap:7px; color:var(--muted); font-size:13px; } label
 .conflict { display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:start; padding:15px; border:1px solid #f2c1b5; border-radius:12px; background:#fff8f5; margin-bottom:10px; } .conflict .seal { padding:7px 9px; border-radius:8px; background:#f25f3a;color:#fff;font-weight:800; }
 .history { display:grid; gap:8px; } .history-row { display:grid; grid-template-columns:150px 120px 1fr; gap:12px; padding:11px 0; border-bottom:1px solid var(--line); font-size:14px; } .muted { color:var(--muted); }
 .draft-banner { padding:12px 14px; border-radius:10px; background:#fff4d8; border:1px solid #efcf83; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.draft-change { display:flex; align-items:center; gap:8px; margin-top:6px; } .draft-change small { color:var(--muted); }
+.field-tag { display:inline-block; background:#ffe2c2; color:#96600d; border-radius:6px; padding:1px 7px; font-size:12px; font-weight:700; }
+.pending-tags { display:flex; flex-wrap:wrap; gap:5px; margin-top:4px; }
+.pending-tag { background:#fff4d8; border:1px solid #efcf83; color:#96600d; border-radius:6px; padding:1px 7px; font-size:11px; }
+.recompute-tag { display:inline-block; margin-top:4px; background:#fde2e2; color:#c84545; border-radius:6px; padding:1px 7px; font-size:11px; }
+.locked-tag { display:inline-block; margin-left:8px; background:#e8f0fe; color:#2b5cb8; border-radius:6px; padding:1px 7px; font-size:11px; }
+.scene.recompute { border-color:#f2c1b5; }
+.adjudication-panel { border-color:#f2c1b5; background:#fff8f5; }
+.adjudication { display:grid; gap:10px; padding:13px; border:1px solid #f2c1b5; border-radius:12px; background:#fff; margin-bottom:10px; }
+.adj-scene { font-weight:700; }
+.adj-versions { display:flex; align-items:center; gap:12px; }
+.adj-version { flex:1; display:grid; gap:3px; padding:10px; border:1px solid var(--line); border-radius:9px; background:#fafbfd; }
+.adj-version small { color:var(--muted); } .adj-version b { font-size:15px; }
+.adj-vs { font-weight:900; color:var(--accent); }
+.waitlist-item { display:grid; gap:6px; padding:13px; border:1px solid #efcf83; border-radius:12px; background:#fffdf4; margin-bottom:10px; }
+.waitlist-item > div { display:grid; gap:2px; } .waitlist-item small { color:var(--muted); }
+.waitlist-reason { margin:0; color:#96600d; font-size:13px; }
+.receipt-msg { margin:10px 0 0; color:#19704b; font-size:13px; }
+.ledger-row { display:grid; grid-template-columns:64px 1fr auto; gap:12px; align-items:center; padding:11px 0; border-bottom:1px solid var(--line); }
+.ledger-status { display:inline-block; text-align:center; padding:3px 6px; border-radius:6px; font-size:11px; font-weight:700; background:#e8edf4; }
+.ledger-status.已落地 { background:#dff3e8; color:#19704b; } .ledger-status.待裁决 { background:#fff0d4; color:#96600d; } .ledger-status.待落地 { background:#fde2e2; color:#c84545; }
+.ledger-main { display:grid; gap:2px; } .ledger-main small { color:var(--muted); }
+.ledger-meta { display:grid; gap:2px; text-align:right; } .ledger-meta small { color:var(--muted); font-size:11px; }
+.demo-box { margin-top:14px; padding-top:14px; border-top:1px dashed var(--line); display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.demo-box small { color:var(--muted); }
+.scene-edit { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:12px; margin-top:8px; background:#fafbfd; border:1px solid var(--line); border-radius:10px; }
+.scene-edit .wide { grid-column:1/-1; }
 @media(max-width:980px){ .app-shell{grid-template-columns:1fr}.sidebar{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center}.network-card{margin:0;width:100%}.grid-2{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)} }
 @media(max-width:680px){ .main{padding:18px}.topbar{align-items:flex-start;flex-direction:column}.scene{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.history-row{grid-template-columns:1fr}.metrics{grid-template-columns:1fr} }
