@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 62010",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview --host 0.0.0.0 --port 62010"
+    "preview": "vite preview --host 0.0.0.0 --port 62010",
+    "verify": "esbuild scripts/verify-engine.ts --bundle --platform=node --format=esm --outfile=node_modules/.cache/verify-engine.mjs --log-level=warning && node node_modules/.cache/verify-engine.mjs"
   },
   "dependencies": {
     "@vee-validate/zod": "^4.15.1",
